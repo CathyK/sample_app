@@ -18,12 +18,11 @@ describe Relationship do
     end    
   end
 
-   describe "follower methods" do
-      it { should respond_to(:follower) }
-      it { should respond_to(:followed) }
-      its(:follower) { should == follower }
-      its(:followed) { should == followed }
-    end
+  describe "follower methods" do
+    it { should respond_to(:follower) }
+    it { should respond_to(:followed) }
+    its(:follower) { should == follower }
+    its(:followed) { should == followed }
   end
   
    describe "when followed id is not present" do
@@ -35,4 +34,4 @@ describe Relationship do
      before { relationship.follower_id = nil }
      it { should_not be_valid }
    end
-  end
+end
